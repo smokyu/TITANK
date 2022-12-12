@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rubik+Microbe&display=swap');
+
+body {
+    background-image: url("../img/fond_connect.png");
+    font-family: 'Poppins', sans-serif;
+    width: 1920;
+    height: 1080;
+}
+
+img {
+    display: flex;
+    width: 460px;
+    height: 132px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 37px;
+}
+
+a {
+    color: #0A1E30;
+    font-size: 30px;
+    text-align: center;
+}
+
+.login-box {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 760px;
+    height: 616px;
+    background-color: #FBFBFB;
+    border-radius: 25px;
+}
+
+.login-box header {
+    width: 760px;
+    height: 29px;
+    background-color: #0A1E30;
+    position: absolute;
+    display: flex;
+    margin-top: -590px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.login-box form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box label {
+    margin-top: 40px;
+    font-size: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.login-box form input {
+    background-color: #EEEEEE;
+    color: #777777;
+    font-size: 20px;
+    border: 0px;
+    height: 43px;
+    width: 606px;
+    border-radius: 19px;
+    margin-bottom: 5px;
+    padding-left: 19px;
+}
+
+
+
+.login-box form #first {
+    margin-top: 60px;
+}
+
+.login-box form .remember-block {
+    display: flex;
+    flex-direction: row;
+    margin-top: 28px;
+    margin-bottom: 48px;
+}
+
+.login-box form .remember-block label {
+    font-size: 20px;
+    margin-top: 0px;
+    margin-left: 8px;
+}
+
+.login-box form .remember-block input {
+    width: 28px;
+    height: 28px;
+}
+
+.login-box h3 {
+    font-family: 'eras-bold-regular', sans-serif;
+    font-size: 50px;
+    position: absolute;
+    display: flex;
+    margin-top: -400px;
+}
+
+.login-box form input[type="submit"] {
+    width: 243px;
+    height: 62px;
+    background-color: #2364AA;
+    border-radius: 25px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+}
