@@ -19,25 +19,58 @@
     </nav>
     <div class="header-group">
         <div class="header">
+            <div class="group">
             <img src="./img/p1.png" alt="Logo">
             <h1>Une banque vraiment différente, <br> ça fait la différence...</h1>
+            </div>
         </div>
         <div class="triangle"></div>
     </div>
-        <div class="create-account">
-            <h1>Titre</h1>
-            <div class="box">
-                <img src="./img/MSG.png" alt="Notre personnage vous parle !">
-                <a href="./register.html"><button type="button">Créer son compte</button></a>
-            </div>
+    <div class="create-account">
+        <h1>Titre</h1>
+        <div class="box">
+            <img src="./img/MSG.png" alt="Notre personnage vous parle !">
+            <a href="./register.html"><button type="button">Créer son compte</button></a>
         </div>
-        <div class="offers">
-            <div class="offer"></div>
-            <div class="offer"></div>
-            <div class="offer"></div>
-            <div class="offer"></div>
-            <div class="offer"></div>
-            <div class="offer"></div>
-        </div>
+    </div><!-- 
+    <div class="offers">
+        <div class="offer"></div>
+        <div class="offer"></div>
+        <div class="offer"></div>
+    </div>
+
+    <div class="opinion-box">
+
+    </div> -->
+        
 </body>
+<script>
+const offers = document.querySelector('.offers')
+
+let pressed = false
+let startX = 0
+
+offers.addEventListener('mousedown', function (e) {
+  pressed = true
+  startX = e.clientX
+  this.style.cursor = 'grabbing'
+})
+
+offers.addEventListener('mouseleave', function (e) {
+  pressed = false
+})
+
+window.addEventListener('mouseup', function (e) {
+  pressed = false
+  offers.style.cursor = 'grab'
+})
+
+offers.addEventListener('mousemove', function (e) {
+  if(!pressed) {
+    return
+  }
+
+  this.scrollLeft += startX - e.clientX
+})
+</script>
 </html>
