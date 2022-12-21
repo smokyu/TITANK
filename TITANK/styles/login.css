@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Rubik+Microbe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@font-face {
+    font-family: 'Eras ITC';
+    src: url('./eras-bold-itc.ttf');
+}
 
 body {
     background-image: url("../img/fond_connect.png");
@@ -94,11 +99,12 @@ a {
 }
 
 .login-box h3 {
-    font-family: sans-serif;
+    font-family: 'Eras ITC', sans-serif;
     font-size: 50px;
     position: absolute;
     display: flex;
     margin-top: -400px;
+    font-weight: 400;
 }
 
 .login-box form input[type="submit"] {

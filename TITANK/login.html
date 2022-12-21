@@ -12,13 +12,13 @@
         <header></header>
         <h3>Me connecter</h3>
         <form action="./account.html">
-            <label id="first">Identifiant</label>
-            <input type="text" placeholder="Saisir mon Identifiant">
-            <label>Mot de passe</label>
-            <input type="password" placeholder="Saisir mon mot de passe">
+            <label id="first" for="id">Identifiant</label>
+            <input id="id" type="text" placeholder="Saisir mon Identifiant">
+            <label for="password">Mot de passe</label>
+            <input id="password" type="password" placeholder="Saisir mon mot de passe">
             <div class="remember-block">
-                <input type="checkbox">
-                <label class="remember">Se rappeler de mon identifiant</label>
+                <input id="check" type="checkbox">
+                <label for="check" class="remember">Se rappeler de mon identifiant</label>
             </div>
             <input type="submit" value="Connexion">
         </form>

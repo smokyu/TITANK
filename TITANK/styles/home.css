@@ -1,12 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Rubik+Microbe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@font-face {
+    font-family: 'Eras ITC';
+    src: url('./eras-bold-itc.ttf');
+}
 
 body {
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    scrollbar-width: none; /* firefox */
+}
+
+body::-webkit-scrollbar { /* chrome */
+    display: none;
 }
 
 img {
     cursor: pointer;
+}
+
+.homepage-content {
+    width: 100%;
 }
 
 .header-group {
@@ -30,16 +46,18 @@ img {
     display: flex;
     margin-top: 94px;
     margin-left: 207px;
-    width: 301px;
-    height: 301px;
+    width: 325px;
+    height: 325px;
 }
 
 .header-group .header h1 {
     color: white;
-    margin-top: 163px;
+    display: flex;
+    align-items: center;
     margin-left: 74px;
     font-size: 70px;
-    font-family: sans-serif;
+    text-align: left;
+    font-family: 'Eras ITC', sans-serif;
 }
 
 .header-group .triangle {
@@ -54,33 +72,45 @@ img {
 .create-account {
     width: 100%;
     height: 900px;
-}
-
-.create-account h1 {
-    font-family: sans-serif;
-    font-size: 50px;
-    margin-left: 160px;
-    color: black;
+    margin-top: 203px;
 }
 
 .create-account .box {
     width: 1511px;
-    height: 598px;
+    height: 450px;
     margin-left: 136px;
     padding-bottom: 88px;
     border: 10px solid #2364AA;
     border-radius: 0px 50px 50px 0px;
 }
 
-.create-account .box img {
-    margin-top: 41px;
+.create-account .box .top {
+    display: flex;
+}
+
+.create-account .box .top img {
+    margin-top: -30px;
     margin-left: 55px;
     margin-bottom: -88px;
     width: 550px;
     height: 550px;
 }
 
+.create-account .box .top .cta {
+    display: flex;
+    flex-direction: column;
+    margin-left: 51px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.create-account .box .top .cta p {
+    margin-top: 75px;
+}
+
 .create-account .box a button {
+    cursor: pointer;
     width: 337px;
     height: 62px;
     background-color: #2364AA;
@@ -88,18 +118,19 @@ img {
     border-radius: 25px;
     font-size: 25px;
     color: white;
-    margin-left: 213px;
-    margin-bottom: 173px;
+    margin-left: 100px;
+    margin-top: 90px;
 }
-/*
-.offers {
+
+
+
+/* SCROLL DES DIFFÉRENTES OFFRES (donc grand lien avec le JS) => pas utile de détailler */
+
+.offers-category .offers {
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 1700px;
     display: flex;
-    padding-bottom: 5px;
-    grid-gap: 1rem;
+    grid-gap: 148px;
     width: 100%;
     overflow-x: auto;
     scroll-snap-type: x;
@@ -108,16 +139,23 @@ img {
     scrollbar-width: none; /* firefox */
 }
 
-/*
-.offers::-webkit-scrollbar { /* chrome */
-    display: none;/*
+
+.offers-category .offers::-webkit-scrollbar { /* chrome */
+    display: none;
 }
 
-.offer {
-    width: 288px;
-    height: 288px;
+.offers-category h1 {
+    margin-top: 100px;
+    font-size: 69px;
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+}
+
+.offers-category .offers .offer {
+    width: 268px;
+    height: 248px;
     border: 1px solid black;
-    min-width: calc(50% - .5rem);
     aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
@@ -127,9 +165,112 @@ img {
     user-select: none;
 }
 
-.opinion-box {
-    margin-top: 137px;
-    width: 1200px;
-    height: 336;
+/* ____________________________________________________________________________________ */
 
-} */
+
+
+.contact-sav {
+    margin-top: 250px;
+    width: 100%;
+    height: 307px;
+    background-color: #2364AA;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+
+h1 {
+    padding-top: 62px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+.contact-sav a {
+    padding-top: 10px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-sav a button {
+    background-color: white;
+    width: 321px;
+    height: 62px;
+    border: none;
+    border-radius: 25px;
+    color: #2364AA;
+    text-align: center;
+    font-size: 25px;
+}
+
+.opinion {
+    margin-top: 137px;
+    width: 100%;
+}
+
+.opinion .box {
+    width: 1200px;
+    height: 336px;
+    border: 10px solid #2364AA;
+    margin: auto;
+}
+
+.opinion .box .author {
+    display: flex;
+}
+
+.opinion .box .author img {
+    width: 137px;
+    height: 137px;
+    margin-top: 39px;
+    margin-left: 53px;
+}
+
+.opinion .box .author .author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.opinion .box .author .author-info h3 {
+    margin-top: 63px;
+    text-align: left;
+    margin-left: 32px;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+
+.opinion .box .author .author-info h5 {
+    margin-top: -35px;
+    text-align: left;
+    margin-left: 32px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+}
+
+.opinion .box p {
+    width: 1000px;
+    margin: auto;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+footer {
+    width: 100%;
+    height: 404px;
+    background-color: #2364AA;
+    margin-top: 400px;
+}
+
+footer img {
+    width: 404px;
+    height: 404px;
+    margin-left: 85px;
+    margin-bottom: -6px;
+}
